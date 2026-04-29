@@ -1,0 +1,4 @@
+# Mobile production build için
+# mobile/.env.production veya EAS environment variable olarak kullanılabilir.
+
+EXPO_PUBLIC_API_BASE_URL=https://api.seslisahne.com/api

@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: sesli-sahne-api
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    plan: starter
+    autoDeploy: false
+    disk:
+      name: sesli-sahne-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 5055
+      - key: DATABASE_PATH
+        value: /app/data/sesli-sahne.sqlite
+      - key: UPLOAD_ROOT
+        value: /app/uploads
+      - key: TTS_PROVIDER
+        value: edge_python
+      - key: EDGE_TTS_RATE
+        value: -16%
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: USER_JWT_SECRET
+        generateValue: true

@@ -1,0 +1,4 @@
+# Admin production build için
+# admin/.env.production olarak kaydedilebilir.
+
+VITE_API_BASE=https://api.seslisahne.com/api

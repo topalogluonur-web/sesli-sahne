@@ -1,0 +1,23 @@
+services:
+  sesli-sahne-api:
+    build:
+      context: ./backend
+    container_name: sesli-sahne-api
+    ports:
+      - "5055:5055"
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 5055
+      DATABASE_PATH: /app/data/sesli-sahne.sqlite
+      UPLOAD_ROOT: /app/uploads
+      TTS_PROVIDER: edge_python
+      EDGE_TTS_RATE: -16%
+      ADMIN_USERNAME: admin
+      ADMIN_PASSWORD: 0000
+      ADMIN_JWT_SECRET: change-this-before-production
+      USER_JWT_SECRET: change-this-before-production-user
+      CORS_ORIGIN: "*"
+    volumes:
+      - ./cloud-data/data:/app/data
+      - ./cloud-data/uploads:/app/uploads

@@ -1,0 +1,22 @@
+{
+  "name": "sesli-sahne-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sesli Sahne backend API - Express + SQLite + PDF import + keysiz Edge/Windows TTS pipeline",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "seed:demo": "node src/seedDemo.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.9.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "ws": "^8.18.0"
+  }
+}

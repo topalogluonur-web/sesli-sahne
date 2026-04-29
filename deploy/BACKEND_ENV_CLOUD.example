@@ -1,0 +1,22 @@
+NODE_ENV=production
+HOST=0.0.0.0
+PORT=5055
+
+# Persistent disk paths on cloud server/container
+DATABASE_PATH=/app/data/sesli-sahne.sqlite
+UPLOAD_ROOT=/app/uploads
+
+# Admin login. Change before real public use.
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=CHANGE_ME_STRONG_PASSWORD
+ADMIN_JWT_SECRET=CHANGE_ME_LONG_RANDOM_SECRET
+USER_JWT_SECRET=CHANGE_ME_LONG_RANDOM_USER_SECRET
+
+# TTS: API key gerekmeden Türkçe neural ses
+TTS_PROVIDER=edge_python
+EDGE_TTS_RATE=-16%
+EDGE_TTS_VOICE_FEMALE=tr-TR-EmelNeural
+EDGE_TTS_VOICE_MALE=tr-TR-AhmetNeural
+
+# First launch can stay permissive. Later set exact domains.
+CORS_ORIGIN=*

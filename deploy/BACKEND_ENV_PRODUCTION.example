@@ -1,0 +1,30 @@
+# Production backend örneği
+# Bu dosyayı backend/.env olarak kullanma; production panelinde environment variable olarak gir.
+
+PORT=5055
+HOST=0.0.0.0
+NODE_ENV=production
+
+# İlk beta için SQLite kullanılabilir ama persistent disk şarttır.
+DATABASE_PATH=/data/sesli-sahne.sqlite
+UPLOAD_ROOT=/data/uploads
+
+# Admin güvenliği
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=BURAYA_GUCLU_BIR_ADMIN_SIFRESI
+ADMIN_JWT_SECRET=BURAYA_UZUN_RASTGELE_SECRET
+
+# Kullanıcı session güvenliği
+USER_JWT_SECRET=BURAYA_UZUN_RASTGELE_USER_SECRET
+
+# TTS - keysiz Python Edge
+TTS_PROVIDER=edge_python
+EDGE_TTS_VOICE_NAME=
+EDGE_TTS_RATE=-16%
+EDGE_TTS_PAUSE_LEVEL=normal
+EDGE_TTS_MAX_CHARS=2300
+
+# OpenAI ileride kullanılacaksa
+OPENAI_API_KEY=
+OPENAI_TTS_MODEL=gpt-4o-mini-tts
+OPENAI_TTS_VOICE=nova

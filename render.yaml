@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: sesli-sahne-backend
+    runtime: node
+    plan: starter
+    region: frankfurt
+    rootDir: backend
+    buildCommand: npm install && if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_PATH
+        value: /var/data/sesli-sahne.sqlite
+      - key: UPLOAD_DIR
+        value: /var/data/uploads
+      - key: AUDIO_DIR
+        value: /var/data/audio
+    disk:
+      name: sesli-sahne-data
+      mountPath: /var/data
+      sizeGB: 1

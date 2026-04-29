@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Sesli Sahne",
+    "slug": "sesli-sahne",
+    "version": "0.2.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.seslisahne.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.seslisahne.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#fff8de"
+      },
+      "permissions": []
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/icon.png"
+    },
+    "scheme": "seslisahne",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff8de"
+    },
+    "description": "Çocuklar, aileler ve yetişkinler için ekransız sesli hikâye ve sesli kitap platformu.",
+    "plugins": [
+      "expo-av"
+    ]
+  }
+}
